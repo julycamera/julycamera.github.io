@@ -18,6 +18,10 @@ Disable any VPNs or proxies on your mobile device, as they can interfere with th
 ### 4. Stable Wi-Fi Signal
 A weak or unstable Wi-Fi signal can cause connectivity issues. Ensure your router provides a strong signal in the area where your devices are located.
 
+### 5. No Wi-Fi in the TV
+
+If you have not setup a Wi-Fi in your tv, and you do not have any physical TV remote now, you need to find an USB keyboard, the old fashioned keyboard will help you in this case, connect the USB with your TV, then you can control the TV with navigation arrow, and setup the Wi-Fi in your TV, then you can use this app now.
+
 ---
 
 ## Troubleshooting Tips
