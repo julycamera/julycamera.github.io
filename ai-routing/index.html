@@ -500,15 +500,31 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
     .market-statement { margin-top: 15px; font-size: clamp(36px, 5vw, 72px); font-weight: 470; line-height: 1.05; letter-spacing: -.06em; }
     .market-statement span { color: #b43f38; }
     .market-intro { max-width: 680px; margin-top: 17px; color: var(--muted); font-size: 14px; line-height: 1.8; }
-    .market-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 42px; }
-    .market-card { min-width: 0; padding-top: 15px; border-top: 2px solid var(--line); }
+    .market-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 38px; }
+    .market-card { position: relative; min-width: 0; min-height: 190px; padding: 23px 20px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; }
     .market-card:nth-child(1) { border-color: #b43f38; }
+    .market-card:not(:last-child)::after { content: "→"; position: absolute; right: -24px; top: 50%; z-index: 1; color: var(--accent); font-size: 28px; transform: translateY(-50%); }
+    .market-card-icon { width: 86px; height: 86px; display: grid; place-items: center; margin-bottom: 15px; color: #b43f38; border: 1px solid currentColor; border-radius: 50%; }
+    .market-card-icon svg { width: 57px; height: 57px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+    .market-card:nth-child(2) .market-card-icon { color: var(--chart-main); }
+    .market-card:nth-child(3) .market-card-icon { color: var(--accent); }
     .market-card-label { color: var(--muted); font-size: 11px; letter-spacing: .04em; }
-    .market-card h2 { margin-top: 10px; font-size: clamp(20px, 2vw, 29px); font-weight: 520; line-height: 1.3; letter-spacing: -.03em; }
+    .market-card h2 { margin-top: 7px; font-size: clamp(20px, 2vw, 29px); font-weight: 520; line-height: 1.3; letter-spacing: -.03em; }
     .market-card p { margin-top: 12px; color: var(--muted); font-size: 13px; line-height: 1.8; }
-    .market-goal { display: flex; align-items: baseline; justify-content: space-between; gap: 22px; margin-top: 37px; padding-top: 19px; border-top: 1px solid var(--line); }
+    .market-goal { display: grid; grid-template-columns: auto auto minmax(0, 1fr); align-items: center; gap: 13px; margin-top: 30px; padding-top: 17px; border-top: 1px solid var(--line); }
+    .market-goal-icon { width: 30px; height: 30px; display: grid; place-items: center; color: var(--accent); }
+    .market-goal-icon svg { width: 27px; height: 27px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
     .market-goal-label { color: var(--muted); font-size: 11px; }
     .market-goal strong { color: #b43f38; font-size: clamp(22px, 2.5vw, 34px); font-weight: 500; letter-spacing: -.04em; text-align: right; }
+    @media (max-width: 760px) {
+      .market-grid { grid-template-columns: 1fr; gap: 24px; margin-top: 28px; }
+      .market-card { min-height: 155px; }
+      .market-card:not(:last-child)::after { content: "↓"; right: auto; top: auto; bottom: -27px; left: 50%; transform: translateX(-50%); }
+      .market-card-icon { width: 72px; height: 72px; margin-bottom: 11px; }
+      .market-card-icon svg { width: 48px; height: 48px; }
+      .market-goal { grid-template-columns: auto minmax(0, 1fr); }
+      .market-goal strong { grid-column: 1 / -1; text-align: left; }
+    }
     @media (max-width: 760px) {
       .model-landscape-content { display: block; max-height: calc(100svh - 180px); overflow-y: auto; padding: 18px 0 22px; }
       .model-signal-grid { grid-template-columns: 1fr; gap: 28px; }
@@ -1174,19 +1190,23 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
         <p class="market-statement" data-i18n="market_statement">先进入渠道，<span>再覆盖全国。</span></p>
         <div class="market-grid">
           <article class="market-card">
+            <div class="market-card-icon" aria-hidden="true"><svg viewBox="0 0 96 96"><path d="M10 55c9-12 18 12 27 0s18 12 27 0 18 12 22 2"/><path d="M10 69c9-12 18 12 27 0s18 12 27 0 18 12 22 2" opacity=".45"/><circle cx="70" cy="26" r="8"/><path d="M70 12v6m0 16v6m14-14h-6m-16 0h-6"/></svg></div>
             <p class="market-card-label" data-i18n="market_blue_label">蓝海窗口</p>
             <h2 data-i18n="market_blue_title">需求已出现</h2>
           </article>
           <article class="market-card">
+            <div class="market-card-icon" aria-hidden="true"><svg viewBox="0 0 96 96"><rect x="31" y="35" width="34" height="26" rx="5"/><circle cx="42" cy="48" r="2"/><circle cx="54" cy="48" r="2"/><path d="M31 48H17m48 0h14M17 48V25m62 23V25"/><circle cx="17" cy="19" r="6"/><circle cx="79" cy="19" r="6"/><path d="M17 73v-8m62 8v-8M48 61v12"/></svg></div>
             <p class="market-card-label" data-i18n="market_existing_label">已有先例</p>
             <h2 data-i18n="market_existing_title">中国公司正在做</h2>
           </article>
           <article class="market-card">
+            <div class="market-card-icon" aria-hidden="true"><svg viewBox="0 0 96 96"><path d="M48 14c-11 0-20 8-20 19 0 15 20 36 20 36s20-21 20-36c0-11-9-19-20-19Z"/><rect x="37" y="31" width="22" height="17" rx="2"/><path d="M41 37h4m6 0h4m-14 6h4m6 0h4M48 48v11"/></svg></div>
             <p class="market-card-label" data-i18n="market_partner_label">关键动作</p>
             <h2 data-i18n="market_partner_title">找到本地伙伴</h2>
           </article>
         </div>
         <div class="market-goal">
+          <div class="market-goal-icon" aria-hidden="true"><svg viewBox="0 0 96 96"><circle cx="48" cy="48" r="31"/><path d="M17 48h62M48 17c9 9 14 20 14 31s-5 22-14 31M48 17c-9 9-14 20-14 31s5 22 14 31"/></svg></div>
           <span class="market-goal-label" data-i18n="market_goal_label">目标</span>
           <strong data-i18n="market_goal_text">快速覆盖全国。</strong>
         </div>
