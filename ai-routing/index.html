@@ -504,10 +504,10 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
     .market-card { position: relative; min-width: 0; min-height: 190px; padding: 23px 20px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; }
     .market-card:nth-child(1) { border-color: #b43f38; }
     .market-card:not(:last-child)::after { content: "→"; position: absolute; right: -24px; top: 50%; z-index: 1; color: var(--accent); font-size: 28px; transform: translateY(-50%); }
-    .market-card-icon { width: 86px; height: 86px; display: grid; place-items: center; margin-bottom: 15px; color: #b43f38; border: 1px solid currentColor; border-radius: 50%; }
+    .market-card-icon { width: 86px; height: 86px; display: grid; place-items: center; margin-bottom: 15px; color: #628aa6; border: 1px solid currentColor; border-radius: 50%; }
     .market-card-icon svg { width: 57px; height: 57px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
-    .market-card:nth-child(2) .market-card-icon { color: var(--chart-main); }
-    .market-card:nth-child(3) .market-card-icon { color: var(--accent); }
+    .market-card:nth-child(2) .market-card-icon { color: #de2910; }
+    .market-card:nth-child(3) .market-card-icon { color: #2456a6; }
     .market-card-label { color: var(--muted); font-size: 11px; letter-spacing: .04em; }
     .market-card h2 { margin-top: 7px; font-size: clamp(20px, 2vw, 29px); font-weight: 520; line-height: 1.3; letter-spacing: -.03em; }
     .market-card p { margin-top: 12px; color: var(--muted); font-size: 13px; line-height: 1.8; }
@@ -1190,17 +1190,17 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
         <p class="market-statement" data-i18n="market_statement">先进入渠道，<span>再覆盖全国。</span></p>
         <div class="market-grid">
           <article class="market-card">
-            <div class="market-card-icon" aria-hidden="true"><svg viewBox="0 0 96 96"><path d="M10 55c9-12 18 12 27 0s18 12 27 0 18 12 22 2"/><path d="M10 69c9-12 18 12 27 0s18 12 27 0 18 12 22 2" opacity=".45"/><circle cx="70" cy="26" r="8"/><path d="M70 12v6m0 16v6m14-14h-6m-16 0h-6"/></svg></div>
+            <div class="market-card-icon" aria-hidden="true"><svg viewBox="0 0 96 96"><path d="M12 57c8-11 16 11 24 0s16 11 24 0 16 11 24 0v14H12Z" fill="currentColor" opacity=".22" stroke="none"/><path d="M10 55c9-12 18 12 27 0s18 12 27 0 18 12 22 2"/><path d="M10 69c9-12 18 12 27 0s18 12 27 0 18 12 22 2" opacity=".55"/><circle cx="70" cy="26" r="8"/><path d="M70 12v6m0 16v6m14-14h-6m-16 0h-6"/></svg></div>
             <p class="market-card-label" data-i18n="market_blue_label">蓝海窗口</p>
             <h2 data-i18n="market_blue_title">需求已出现</h2>
           </article>
           <article class="market-card">
-            <div class="market-card-icon" aria-hidden="true"><svg viewBox="0 0 96 96"><rect x="31" y="35" width="34" height="26" rx="5"/><circle cx="42" cy="48" r="2"/><circle cx="54" cy="48" r="2"/><path d="M31 48H17m48 0h14M17 48V25m62 23V25"/><circle cx="17" cy="19" r="6"/><circle cx="79" cy="19" r="6"/><path d="M17 73v-8m62 8v-8M48 61v12"/></svg></div>
+            <div class="market-card-icon" aria-hidden="true"><svg viewBox="0 0 96 96"><rect x="22" y="27" width="52" height="42" rx="3" fill="#de2910" stroke="none"/><path d="m34 35 2.2 5.3 5.7.5-4.4 3.7 1.3 5.5-4.8-3-4.8 3 1.3-5.5-4.4-3.7 5.7-.5Z" fill="#ffde00" stroke="none"/><circle cx="46" cy="33" r="2" fill="#ffde00" stroke="none"/><circle cx="52" cy="38" r="2" fill="#ffde00" stroke="none"/><circle cx="53" cy="46" r="2" fill="#ffde00" stroke="none"/><circle cx="48" cy="52" r="2" fill="#ffde00" stroke="none"/><path d="M14 75h68"/></svg></div>
             <p class="market-card-label" data-i18n="market_existing_label">已有先例</p>
             <h2 data-i18n="market_existing_title">中国公司正在做</h2>
           </article>
           <article class="market-card">
-            <div class="market-card-icon" aria-hidden="true"><svg viewBox="0 0 96 96"><path d="M48 14c-11 0-20 8-20 19 0 15 20 36 20 36s20-21 20-36c0-11-9-19-20-19Z"/><rect x="37" y="31" width="22" height="17" rx="2"/><path d="M41 37h4m6 0h4m-14 6h4m6 0h4M48 48v11"/></svg></div>
+            <div class="market-card-icon" aria-hidden="true"><svg viewBox="0 0 96 96"><path d="M48 14c-11 0-20 8-20 19 0 15 20 36 20 36s20-21 20-36c0-11-9-19-20-19Z"/><rect x="36" y="30" width="24" height="18" rx="2" fill="#fff" stroke="none"/><path d="M36 36h24v6H36Z" fill="#2456a6" stroke="none"/><path d="M36 42h24v6H36Z" fill="#d52b1e" stroke="none"/><path d="M36 30h24v18H36Z"/><path d="M48 48v11"/></svg></div>
             <p class="market-card-label" data-i18n="market_partner_label">关键动作</p>
             <h2 data-i18n="market_partner_title">找到本地伙伴</h2>
           </article>
