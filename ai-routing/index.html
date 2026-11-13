@@ -98,7 +98,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
     .source-button { font-size: 11px; color: var(--muted); background: transparent; border: 0; min-height: 40px; padding: 0; white-space: nowrap; }
     .source-button:hover { color: var(--accent); }
     [hidden] { display: none !important; }
-    .footer-actions { display: flex; align-items: center; flex-shrink: 0; }
+    .footer-actions { display: flex; align-items: center; justify-content: flex-end; flex-shrink: 0; margin-left: auto; }
     .page-navigation { position: fixed; right: max(var(--page-inset), calc((100vw - 1440px) / 2 + var(--page-inset))); bottom: 12px; z-index: 10; display: flex; gap: 12px; }
     .page-navigation button { width: 80px; height: 40px; padding: 0; border: 0; border-radius: 4px; background: var(--bg); font-size: 11px; white-space: nowrap; }
     .page-navigation button:hover:not(:disabled) { color: var(--accent); background: var(--surface); }
@@ -175,7 +175,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
       footer { display: grid; grid-template-columns: 1fr; gap: 8px; padding: 12px 0; }
       .data-note, .source-button { font-size: 10px; }
       .source-button { padding: 0; line-height: 1.7; }
-      .footer-actions { min-height: 40px; padding-right: 188px; }
+      .footer-actions { min-height: 40px; padding-right: 188px; justify-content: flex-end; }
       .page-navigation button { font-size: 10px; }
 
       html[lang="zh-CN"] #revenue h1 { font-size: clamp(30px, 6.2vw, 47px); }
@@ -399,7 +399,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
     .model-family-list.closed { color: var(--accent); }
     .model-family-note { margin-top: 13px; color: var(--muted); font-size: 10px; line-height: 1.6; }
     .model-caveat { width: min(1180px, 100%); margin: 24px auto 0; color: var(--muted); font-size: 11px; line-height: 1.7; }
-    .model-source-row { display: flex; justify-content: flex-end; width: min(1180px, 100%); margin: 10px auto 0; }
+    .model-source-row { display: none; }
     .build-content { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr); gap: clamp(34px, 6vw, 90px); align-items: center; padding: 20px 0 30px; }
     .build-path { min-width: 0; padding-right: 32px; border-right: 1px solid var(--line); }
     .build-path-heading, .build-estimate-heading { font-size: 12px; font-weight: 500; color: var(--muted); margin-bottom: 30px; }
@@ -1045,9 +1045,9 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
             </div><p class="model-family-note" data-i18n="model_families_note">代表家族 / 型号 · 同一家族不同型号的开放方式可能不同</p>
           </section>
         </div>
-        <div class="model-caveat" data-i18n="model_caveat">仅列代表模型，非完整名单；开放权重的商业使用条件以各型号许可为准。</div><div class="model-source-row"><button class="source-button" data-dialog="model-sources" aria-haspopup="dialog" aria-controls="model-sources" data-i18n="model_source_button">资料来源 ↗</button></div>
+        <div class="model-caveat" data-i18n="model_caveat">仅列代表模型，非完整名单；开放权重的商业使用条件以各型号许可为准。</div>
       </div>
-    </main><footer></footer>
+    </main><footer><div class="footer-actions"><button class="source-button" data-dialog="model-sources" aria-haspopup="dialog" aria-controls="model-sources" data-i18n="model_source_button">资料来源 ↗</button></div></footer>
   </div>
   <div class="page" id="model-build" hidden>
     <main>
